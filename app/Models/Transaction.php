@@ -20,9 +20,4 @@ class Transaction extends Model
     {
         return $this->belongsTo(User::class, 'customer_id', 'id');
     }
-
-    public function invoice()
-    {
-        return $this->belongsTo(Invoice::class);
-    }
 }

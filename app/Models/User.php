@@ -53,11 +53,6 @@ class User extends Authenticatable
         return $this->hasMany(Profile::class, 'company_id', 'id');
     }
 
-    public function invoices()
-    {
-        return $this->hasMany(Invoice::class, 'customer_id', 'id');
-    }
-
     public function products()
     {
         return $this->hasMany(Product::class, 'company_id', 'id');

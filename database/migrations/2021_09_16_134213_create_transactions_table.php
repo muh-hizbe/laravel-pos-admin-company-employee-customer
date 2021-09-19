@@ -17,7 +17,6 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->foreignId('product_id');
             $table->foreignId('customer_id')->references('id')->on('users');
-            $table->foreignId('invoice_id')->nullable()->references('id')->on('invoices');
             $table->bigInteger('price');
             $table->bigInteger('quantity');
             $table->bigInteger('discount_price')->nullable();
